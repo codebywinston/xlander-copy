@@ -248,9 +248,9 @@ nav{
     }
 
     .menu{
-        display: none;
         position: absolute;
         top: 75px;
+        left: -5000px;
  
         flex-direction: column;
         text-align: center;
@@ -258,8 +258,18 @@ nav{
 
         width: 100%;
 
-        transition: visibility .5s;
+        transition: left .3s;
     }
+
+    #menuShow{
+       position: absolute;
+       top: -9999px;
+       left: -9999px;
+    }
+
+    #menuShow:checked ~ .menu{
+       left: 0px;
+     }
 
 
 
